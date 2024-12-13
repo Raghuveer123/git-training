@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: secret-reader
-  namespace: tanzu-system-ingress
+  namespace: test
 rules:
 - apiGroups: [""]
   resources: ["secrets"]
