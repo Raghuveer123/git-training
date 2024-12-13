@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: secret-reader-binding
-  namespace: tanzu-system-ingress
+  namespace: test
 subjects:
 - kind: User
   name: sso:test-test-u@test.com
