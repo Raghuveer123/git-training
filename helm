@@ -1,0 +1,8 @@
+helm install nginx-ingress-2 ingress-nginx/ingress-nginx \
+  --namespace ingress-nginx-2 \
+  --create-namespace \
+  --set controller.service.annotations."service\.beta\.kubernetes\.io/azure-load-balancer-internal"="true" \
+  --set controller.ingressClassResource.name=nginx-internal-class-2 \
+  --set controller.ingressClassResource.controllerValue=k8s.io/ingress-nginx-2 \
+  --set controller.service.type=LoadBalancer \
+  --set controller.service.externalTrafficPolicy=Local
